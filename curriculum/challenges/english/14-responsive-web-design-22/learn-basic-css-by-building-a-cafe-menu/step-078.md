@@ -7,7 +7,7 @@ dashedName: step-78
 
 # --description--
 
-Next you are going to be styling the `footer` element. To keep the CSS organized, add a comment at the end `styles.css` with the text `FOOTER`.
+Next you are going to be styling the `footer` element. To keep the CSS organized, add a comment at the end of `styles.css` with the text `FOOTER`.
 
 # --hints--
 
@@ -68,7 +68,7 @@ assert(code.match(/\/\*\s*FOOTER\s*\*\//i));
             <p class="dessert">Cheesecake</p><p class="price">3.00</p>
           </article>
           <article class="item">
-            <p class="dessert">Cinammon Roll</p><p class="price">2.50</p>
+            <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
           </article>
         </section>
       </main>

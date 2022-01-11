@@ -7,7 +7,7 @@ dashedName: step-60
 
 # --description--
 
-You can add a <dfn>fallback</dfn> value for the font-family by adding another font name separated by a comma. This second font would be used in case the browser does not have the font built-in to it.
+You can add a <dfn>fallback</dfn> value for the font-family by adding another font name separated by a comma. Fallbacks are used in instances where the initial is not found/available.
 
 Add the fallback font `serif` after the `Impact` font.
 
@@ -70,7 +70,7 @@ assert(fontFamily === 'Impact, serif');
             <p class="dessert">Cheesecake</p><p class="price">3.00</p>
           </article>
           <article class="item">
-            <p class="dessert">Cinammon Roll</p><p class="price">2.50</p>
+            <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
           </article>
         </section>
       </main>

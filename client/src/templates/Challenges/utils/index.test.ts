@@ -1,8 +1,7 @@
 import envData from '../../../../../config/env.json';
+import { getGuideUrl } from './index';
 
 const { forumLocation } = envData;
-
-const { getGuideUrl } = require('./');
 
 describe('index', () => {
   describe('getGuideUrl', () => {

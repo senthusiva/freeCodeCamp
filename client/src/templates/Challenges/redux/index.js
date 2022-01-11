@@ -190,7 +190,8 @@ export const challengeDataSelector = state => {
     };
   } else if (
     challengeType === challengeTypes.html ||
-    challengeType === challengeTypes.modern
+    challengeType === challengeTypes.modern ||
+    challengeType === challengeTypes.multiFileCertProject
   ) {
     const { required = [], template = '' } = challengeMetaSelector(state);
     challengeData = {
@@ -230,13 +231,11 @@ export const reducer = handleActions(
         );
       return {
         ...state,
-        challengeFiles: [
-          ...state.challengeFiles.filter(x => x.fileKey !== fileKey),
-          {
-            ...state.challengeFiles.find(x => x.fileKey === fileKey),
-            ...updates
-          }
-        ]
+        challengeFiles: state.challengeFiles.map(challengeFile =>
+          challengeFile.fileKey === fileKey
+            ? { ...challengeFile, ...updates }
+            : { ...challengeFile }
+        )
       };
     },
     [actionTypes.storedCodeFound]: (state, { payload }) => ({
